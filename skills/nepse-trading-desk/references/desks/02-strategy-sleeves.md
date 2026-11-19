@@ -7,7 +7,9 @@ list.
 ## Running a sleeve
 
 - With Strategy Builder in the user's plan, run the sleeve's rules with `scan_strategy(rules)`: it returns today's
-  matches, how many stocks survive each rule, and the "almost" list.
+  matches, how many stocks survive each rule (`stepsSurviving`), and the "almost" list. In "almost", `missed` is the
+  position of the one rule the stock fails (0 = the first rule), not a count.
+- During market hours, scans use live prices: say the matches are provisional until the 15:00 close.
 - Without it, use the fallback calls listed per sleeve.
 - Respect the regime from station 1: run the favoured sleeves first; in a 🔴 downtrend, run at most two and say ideas
   are for watching or paper trading.

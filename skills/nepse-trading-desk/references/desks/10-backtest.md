@@ -5,8 +5,12 @@ A setup that looks good today may have failed most of the time in the past. The 
 ## With Strategy Builder in the plan
 
 Run the sleeve's rules with `backtest_strategy(rules, holdDays, period: "1Y")`. Match `holdDays` to the trade's
-horizon (5 or 10 for bounces, 20 for swings, 40 for trends). Add the stock's sector rule to test it where it trades.
-Broker and fundamentals rules are skipped by the backtest (they describe today only); say so.
+horizon (5 or 10 for bounces, 20 for swings, 40 for trends). Broker and fundamentals rules are skipped by the backtest
+(they describe today only); say so.
+
+**Always test where you'll trade.** Run the sleeve market-wide *and* with the candidate's sector rule
+(`{"type":"sector","sectors":["banking"]}`). A setup can lose money across the market and still work in one sector,
+or the reverse; the sector result is the one that applies to the idea. Report both.
 
 Read the result like this:
 

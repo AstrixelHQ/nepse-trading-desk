@@ -32,7 +32,8 @@ Their total is the **confluence score** (out of 100): how much the different kin
 
 ## 3. Flow analyst (0-25)
 
-See `04-smart-money.md` for how to read the data.
+See `04-smart-money.md` for how to read the data. Judge direction by the sign of each broker's `netQty` (the
+accumulation and distribution lists overlap), and add up the net buyers and net sellers you see.
 - **Direction (0-10):** net accumulation over a month = 7-10; balanced = 4-6; net distribution = 0-3.
 - **Scale (0-8):** top net buyers' quantity as a share of the month's total volume: 25% or more = 6-8, 10-25% = 3-5,
   under 10% = 0-2.

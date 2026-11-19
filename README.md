@@ -55,6 +55,8 @@ Risk desk: ✅ regime ✅ liquidity ⚠️ reward/risk 1.5 to target 1: better e
 
 Every term is explained in plain words the first time it appears. On apps that can draw diagrams, the desk adds one.
 
+**See a real run:** [What should I buy this week? (19 Nov 2026)](examples/what-should-i-buy-2026-11-19.md): the full desk on live data, with the market regime, four sleeves, two plans that passed the risk desk, two ideas it rejected, and backtests that found an edge only in banks.
+
 ## How the desk works
 
 ```mermaid
@@ -135,6 +137,8 @@ Review my portfolio. Am I too concentrated?
 Put that trade in my paper account and alert me at the stop.
 NEPSE aaja kasto bhayo?
 ```
+
+The first one, run for real: [example report](examples/what-should-i-buy-2026-11-19.md).
 
 ## What it will and won't do
 

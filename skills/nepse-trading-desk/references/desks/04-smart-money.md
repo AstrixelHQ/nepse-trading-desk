@@ -21,6 +21,10 @@ offer, and the easiest place to overclaim. Read it as evidence about demand, not
 
 ## How to read it
 
+- **Read the sign, not the list name.** The `accumulation` and `distribution` views are ranked by activity and
+  overlap: a heavy net seller can appear near the top of "accumulation". A positive `netQty` means the broker's clients
+  bought more than they sold; negative means they sold more. Call both views and sort it out by `netQty`.
+
 - **Time beats size.** A broker net buying steadily across three or four weeks says more than one huge day. Compare
   1W with 1M and 3M.
 - **Scale it.** Net quantities mean little alone: compare them with the stock's total volume over the same period.

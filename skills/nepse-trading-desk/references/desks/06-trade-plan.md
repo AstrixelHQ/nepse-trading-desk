@@ -8,10 +8,14 @@ act, never an instruction. Read `../nepse-basics.md` for costs and the price ban
 **1. Entry zone.** Prefer a zone near support or the 20-day average, not the day's high. Breakout sleeves can use
 "above the breakout level after a close above it". Give a range: "Rs 532 to Rs 540".
 
-**2. Stop (where the idea is wrong).** The lower of:
-- just below the nearest real support or the last swing low (from `get_technical_summary` levels), and
-- entry minus 2 × ATR (ATR = average daily range; `get_technical_summary` gives it as a % of price).
-Say it as a closing rule: "exit if it closes below Rs 518".
+**2. Stop (where the idea is wrong).** Just below the nearest real support or the last swing low under the entry
+(from `get_technical_summary` levels), **but never closer than 1.5 × ATR to the entry** (ATR = the stock's typical
+daily range; `get_technical_summary` gives it). If the support is closer than that, use entry − 1.5 × ATR, so normal
+daily wiggle doesn't stop you out. If the nearest support is more than 3 × ATR away, the setup is too loose: wait for a
+better entry. Say it as a closing rule: "exit if it closes below Rs 247".
+
+If the reward-to-risk is poor at today's price, don't force it: find the entry where it works (a dip to support or
+a Fibonacci level, or a close above resistance) and make the plan conditional on that ("wait for a dip to Rs 255-259").
 
 **3. Targets.** Target 1 at the next resistance; target 2 at the 52-week high or the next level above. Compute the
 **reward-to-risk** = (target − entry) ÷ (entry − stop). The desk wants at least **2.0** to target 1 or 2. Below 1.5,
