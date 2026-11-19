@@ -1,0 +1,18 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "stockyan",
+  "description": "StockYan skills for researching the Nepal Stock Exchange (NEPSE) with live data.",
+  "owner": {
+    "name": "StockYan",
+    "url": "https://stockyan.com"
+  },
+  "plugins": [
+    {
+      "name": "stockyan-research",
+      "description": "Research NEPSE stocks like an analyst: fundamentals, technicals, broker flow and news from the StockYan connector, then a bull case, a bear rebuttal, a risk check and a dated report.",
+      "source": "./",
+      "category": "finance",
+      "homepage": "https://stockyan.com/features/nepse-ai-connector/"
+    }
+  ]
+}

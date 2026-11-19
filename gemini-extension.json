@@ -1,0 +1,11 @@
+{
+  "name": "stockyan",
+  "version": "1.0.0",
+  "description": "Nepal Stock Exchange (NEPSE) research with live StockYan data: prices, filings, broker buying and selling, scanners and your own portfolio.",
+  "contextFileName": "GEMINI.md",
+  "mcpServers": {
+    "stockyan": {
+      "httpUrl": "https://stockyan.astrixel.com/mcp"
+    }
+  }
+}

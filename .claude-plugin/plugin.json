@@ -1,0 +1,25 @@
+{
+  "name": "stockyan-research",
+  "description": "Research Nepal Stock Exchange (NEPSE) stocks with live StockYan data: deep dives, idea screens, portfolio reviews, broker flow and market briefs.",
+  "version": "1.0.0",
+  "author": {
+    "name": "StockYan",
+    "url": "https://stockyan.com"
+  },
+  "homepage": "https://stockyan.com/features/nepse-ai-connector/",
+  "repository": "https://github.com/AstrixelHQ/stockyan-skills",
+  "license": "MIT",
+  "keywords": [
+    "nepse",
+    "nepal",
+    "stock-market",
+    "stock-research",
+    "claude-skills",
+    "agent-skills",
+    "mcp",
+    "broker-analysis",
+    "floorsheet"
+  ],
+  "privacyPolicyUrl": "https://stockyan.com/privacy/",
+  "icon": ".claude-plugin/icon.png"
+}

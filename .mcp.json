@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "stockyan": {
+      "type": "http",
+      "url": "https://stockyan.astrixel.com/mcp"
+    }
+  }
+}
