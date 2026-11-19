@@ -26,13 +26,15 @@ for skill in sorted((root / "skills").iterdir()):
         errors.append(f"{skill.name}: name must be lowercase-with-hyphens, 64 characters or fewer")
     if not (20 <= len(fm.get("description", "")) <= 1024):
         errors.append(f"{skill.name}: description must be 20 to 1024 characters")
-    for ref in sorted(set(re.findall(r"`(references/[\w.-]+\.md)`", text))):
+    for ref in sorted(set(re.findall(r"`(references/[\w./-]+\.md)`", text))):
         if not (skill / ref).exists():
             errors.append(f"{skill.name}: SKILL.md points to missing {ref}")
-    for ref in (skill / "references").glob("*.md"):
-        for other in re.findall(r"`references/([\w.-]+\.md)`", ref.read_text()):
-            if not (skill / "references" / other).exists():
-                errors.append(f"{skill.name}/{ref.name}: points to missing references/{other}")
+    # Reference files may point at each other relative to themselves, or from the skill root (references/...).
+    for ref in (skill / "references").rglob("*.md"):
+        for other in re.findall(r"`((?:\.\./|references/|desks/)?[\w-]+(?:/[\w-]+)*\.md)`", ref.read_text()):
+            candidates = [skill / other, ref.parent / other, skill / "references" / other]
+            if not any(c.exists() for c in candidates):
+                errors.append(f"{skill.name}/{ref.relative_to(skill)}: points to missing {other}")
 
 print("\n".join(errors) if errors else "ok: skills and manifests are valid")
 sys.exit(1 if errors else 0)

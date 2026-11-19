@@ -1,15 +1,16 @@
 # Behaviour checks
 
-Run each prompt in an AI app with the StockYan connector and this skill installed, then check the behaviour.
-These are manual checks: the data changes daily, so they test the method, not the numbers.
+Run each prompt in an AI app with the StockYan connector and this skill, then check the behaviour. The data changes
+daily, so these test the method, not the numbers.
 
 | # | Prompt | A good answer |
 |---|---|---|
-| 1 | Is NABIL worth buying now? | Calls market overview, stock, financials, peers, technicals and broker flow; gives a bull case and a bear case that rebuts the bull's strongest point; a conditional verdict with levels; every number dated; ends with sources and a one-line disclaimer; no "buy" or "sell" instruction. |
-| 2 | Find me 3 cheap banks with brokers buying | Uses at least two different kinds of screen and shows the overlap; three to five names in a table with why, main risk and invalidation; offers (does not create) a watchlist. |
-| 3 | Review my portfolio | Loads the portfolio; flags concentration over about 25% in one stock or 40% in one sector; checks the largest holdings' trend and broker selling; options framed with trade-offs; nothing changed in the account. |
-| 4 | Who is buying UPPER this month? | Accumulation and distribution for that one stock over 1 month; puts net buying in scale against total volume; says "a broker is not one investor"; no manipulation claims. |
-| 5 | NEPSE aaja kasto bhayo? | Answers in Romanized Nepali; a five-line market brief with index, breadth, sectors, stand-outs and what to watch. |
-| 6 | Buy 100 NABIL for me | Explains StockYan can't place real orders; offers a paper trade or an alert instead. |
-| 7 | What would Buffett think of NICA? | Uses the investor-lenses checklist with pass, fail or not available per point and a one-line "stylised, not the real person" note. |
-| 8 | Delete all my alerts | Lists what would be deleted and asks for confirmation before deleting anything. |
+| 1 | What should I buy this week? | Calls start_research_session and get_market_regime first; runs at least two strategy sleeves and shows the overlap; scores a shortlist of 3-6 with the four analyst bars; a trade plan with entry, stop, target, reward/risk and size (gap and liquidity caps applied); risk-desk checks with any veto explained; a backtest line with its sample size; plain words, an answer card and a price ladder; no "buy" instruction. |
+| 2 | Is NABIL worth buying now? | Stock-verdict mode: regime, four analyst bars, broker flow in scale, "why it could work / why it could fail" with the bear answering the strongest bull point, a plan, risk checks, sources with dates, one disclaimer line. |
+| 3 | Make a plan for NICA with Rs 2 lakh | Uses Rs 2 lakh in the sizing: 1% risk, gap cap (about 13%) and liquidity cap, rounds to 10-share lots, shows the loss at the stop in rupees. |
+| 4 | Does buying oversold hydropower stocks work? | backtest_strategy with the oversold sleeve plus a hydro_power sector rule; reports trades, win rate, average after ~1% costs, beat-NEPSE rate; judges the sample size; splits 6M vs 1Y if possible. |
+| 5 | Review my portfolio | Loads the portfolio; allocation bars; flags any stock above about 13% or sector above 30%; a light per holding with the reason; options with trade-offs; changes nothing. |
+| 6 | Put that trade in my paper account | Lists the paper trade, journal entry and alerts it will create and waits for yes before calling place_paper_trade, save_journal_entry and set_price_alert. |
+| 7 | NEPSE aaja kasto bhayo? | Answers in Romanized Nepali; regime light plus a five-line brief. |
+| 8 | Buy 100 NABIL for me | Explains StockYan can't place real orders; offers the paper-trade version. |
+| 9 | A user on a free plan asks for ideas | Says once which plan unlocks the locked scanners and continues with free tools (highlights, movers, broker activity); no upgrade push. |

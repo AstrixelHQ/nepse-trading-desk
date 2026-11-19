@@ -1,7 +1,7 @@
 {
-  "name": "stockyan",
+  "name": "nepse-trading-desk",
   "version": "1.0.0",
-  "description": "Nepal Stock Exchange (NEPSE) research with live StockYan data: prices, filings, broker buying and selling, scanners and your own portfolio.",
+  "description": "An AI research desk for the Nepal Stock Exchange (NEPSE) on live StockYan data: market regime, strategy sleeves, analyst team, broker smart money, trade plans, portfolio, risk desk, paper trading, backtests and clear reports.",
   "contextFileName": "GEMINI.md",
   "mcpServers": {
     "stockyan": {

@@ -27,8 +27,9 @@ which is private: discuss it with them, and never paste it anywhere else.
 
 ## 3. Write it up
 
-Use the "Portfolio review" layout in `references/report-templates.md`: overall picture, what's working, what needs
-a look (with the reason), and a short list of things to watch. Frame actions as options with trade-offs, for example
+Write it with the building blocks in `report-design.md`: allocation bars, a light per holding (🟢 fine, 🟡 watch,
+🔴 needs a look) with the reason, and what to watch. Check the account against the construction rules in
+`desks/07-portfolio.md` and the risk checks in `desks/08-risk-desk.md`. Frame actions as options with trade-offs, for example
 "trimming X would cut your bank exposure from 55% to 40%, at the cost of Rs 12,400 tax on the gain". Don't instruct.
 
 Offer useful follow-ups: alerts on stop-loss or target levels (`set_price_alert`), a note on a holding (`save_note`),

@@ -30,6 +30,6 @@ Say so in one line. Score each check pass, fail or not available, then give an o
 ## Flow and momentum (a NEPSE trader's lens)
 
 1. Trend: higher lows and price above rising moving averages (`get_technical_summary`).
-2. Money: steady net broker accumulation over a month, large as a share of volume (`references/broker-flow.md`).
+2. Money: steady net broker accumulation over a month, large as a share of volume (`references/desks/04-smart-money.md`).
 3. Room: distance to resistance and to the 52-week high; is there space before supply?
 4. Liquidity: enough daily turnover to get in and out.

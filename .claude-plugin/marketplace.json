@@ -1,18 +1,18 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
-  "name": "stockyan",
-  "description": "StockYan skills for researching the Nepal Stock Exchange (NEPSE) with live data.",
+  "name": "nepse-trading-desk",
+  "description": "NEPSE Trading Desk: an AI research desk for the Nepal Stock Exchange, run on live StockYan data.",
   "owner": {
     "name": "StockYan",
     "url": "https://stockyan.com"
   },
   "plugins": [
     {
-      "name": "stockyan-research",
-      "description": "Research NEPSE stocks like an analyst: fundamentals, technicals, broker flow and news from the StockYan connector, then a bull case, a bear rebuttal, a risk check and a dated report.",
+      "name": "nepse-trading-desk",
+      "description": "An AI research desk for NEPSE: market regime, multi-strategy idea hunting, an analyst team with a confluence score, broker smart-money tracking, pros and cons, trade plans with stops and position sizes, portfolio construction, a risk desk, paper-trade simulation, backtests and a plain-language report with visuals.",
       "source": "./",
       "category": "finance",
-      "homepage": "https://stockyan.com/features/nepse-ai-connector/"
+      "homepage": "https://github.com/AstrixelHQ/nepse-trading-desk"
     }
   ]
 }

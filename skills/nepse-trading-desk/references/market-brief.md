@@ -5,6 +5,7 @@ trader reads it in thirty seconds.
 
 ## Calls (in parallel)
 
+- `get_market_regime()`: the tide (uptrend, mixed, weak, downtrend) with the 200-day average and breadth.
 - `get_market_overview`: index, change, turnover, advancers vs decliners, sub-indices, top gainers and losers.
 - `get_sector_performance()`: every sector's change and turnover.
 - `get_top_movers(type: "turnover", explain: true)`: where the money actually traded, with a read of what the movers have in common.
@@ -13,9 +14,9 @@ trader reads it in thirty seconds.
 - For a weekly brief, use `period: "1W"` on `get_top_movers`, add `get_broker_activity(view: "top_buyers", period: "1W")` (whole market) and
   `get_market_highlights(kind: "near_52_week_high")` and `kind: "near_52_week_low"`.
 
-## Write it up (the "Market brief" layout in report-templates.md)
+## Write it up (plain words and lights, see report-design.md)
 
-1. One line: index, change, turnover, and whether breadth agreed (more stocks up than down?).
+1. One line with the regime light: index, change, turnover, and whether breadth agreed (more stocks up than down?).
 2. Where the money went: the top two or three sectors by turnover and change.
 3. Stand-outs: two or three stocks with a reason (volume spike, 52-week high, news).
 4. One line of news that matters.

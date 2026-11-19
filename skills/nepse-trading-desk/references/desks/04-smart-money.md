@@ -1,4 +1,4 @@
-# Broker flow (floorsheet and "smart money")
+# Station 4: Smart-money tracker (floorsheet and broker flow)
 
 NEPSE publishes which broker bought from which broker on every trade. That is a real edge most markets don't
 offer, and the easiest place to overclaim. Read it as evidence about demand, not as proof of who or why.
@@ -30,6 +30,11 @@ offer, and the easiest place to overclaim. Read it as evidence about demand, not
   they are already in profit and may sell into strength.
 - **Buying while the price falls** (absorption) or **selling while the price rises** (distribution into strength) are
   the interesting divergences. Say which you see.
+- **Selling is the clearer signal.** Heavy, steady net selling by a few brokers is a more reliable warning than buying
+  is an invitation. Weight distribution a little more than accumulation.
+- **Thin stocks are easy to push.** In low paid-up-capital or low-float stocks, a few brokers can move the price on
+  little money, and circular trading has been documented in NEPSE. Treat "smart money" in these as a caution flag.
+- **Data timing.** Broker numbers on trades are published after the close, so intraday broker data isn't available.
 - **A broker is not one investor.** Each broker executes for thousands of clients. "Broker 58 bought" means its
   clients bought, together.
 - **Matching pairs and circular trading.** The same pair trading back and forth can mean wash-style trades, but it
